@@ -6,7 +6,9 @@ Predict a person's later survey answers from their earlier profile. This project
 
 **All results are development-validation scores. The 309-person test set remains unscored.**
 
-[Experiment slides](Twin_2K_500_Experiments.pptx) · [EDA notebook](Twin_2K_500_EDA.ipynb)
+[Experiment report / slides](Twin_2K_500_Experiments.pptx) · [EDA findings](docs/EDA_FINDINGS.md) · [EDA notebook](Twin_2K_500_EDA.ipynb)
+
+[Run inference](docs/INFERENCE.md) · [Prompt formats and examples](docs/PROMPTS.md) · [Acceptance criteria and maintenance](docs/EVALUATION_AND_MAINTENANCE.md)
 
 ## Data
 
@@ -69,12 +71,18 @@ Pilot baseline: **72.52%**. Human B/C consistency: **76.73%**, a reference rathe
 
 Scores average within each question ID, then across IDs. Accuracy is higher-is-better; normalized absolute error is lower-is-better (divided by `K − 1` for ordered choices or the allowed numeric range). Unbounded numeric errors are reported separately in the slides. Repeated validation use limits generalization claims.
 
+[EDA findings](docs/EDA_FINDINGS.md) report human B/C repeatability across question groups, paired counts, demographic distributions and missingness. The [evaluation and maintenance plan](docs/EVALUATION_AND_MAINTENANCE.md) defines proposed acceptance gates and monitoring; these are future criteria, not claims that the current model passes. Business applications and prohibited uses are in slide 17.
+
 ## Repository contents
 
 | Path | Purpose |
 |---|---|
-| `Twin_2K_500_Experiments.pptx` | Experimental setup and detailed results |
+| `Twin_2K_500_Experiments.pptx` | Experimental setup, detailed results and proposed business applications |
 | `Twin_2K_500_EDA.ipynb` | Data structure, question types and leakage example |
+| `docs/` | EDA findings, prompt examples, inference, reproduction and maintenance guides |
+| `scripts/` / `examples/` | Portable adapter inference and EDA commands; synthetic example inputs |
+| `adapters/full-b-lora/epoch-1/` | Published Full-B LoRA adapter, tokenizer and chat template |
+| `tests/` | CPU checks for inference input/prompt handling and selected-answer validation |
 | `experiments/01_pilot/` | Pilot inference, LoRA, full fine-tuning and cross-validation |
 | `experiments/02_full_b_lora/` | Full-B LoRA training and evaluation |
 | `experiments/03_epoch1_comparisons/` | Epoch-1 inference, profile ablations and lexical baselines |
@@ -82,37 +90,29 @@ Scores average within each question ID, then across IDs. Accuracy is higher-is-b
 | `experiments/05_embedding_selected/` | Retrieval with selected-answer profile text |
 | `experiments/setup/` | Workspace preparation |
 
-Raw data, model weights, checkpoints and run outputs are not included.
+The **Full-B epoch-1 adapter is included**. Raw participant data, base-model weights, other checkpoints and participant-level predictions are excluded. Small aggregate EDA results are included in `docs/eda/`.
 
-## Getting started
+## Run the uploaded adapter
 
-Use Linux, Python 3.12 and CUDA-enabled PyTorch 2.8.0. Historical fine-tuning used a 48 GB NVIDIA GPU. Run from the repository root with a private workspace outside the repository:
-
-```bash
-python -m pip install -r experiments/requirements.txt
-export RUN_ROOT="$PWD/../twin_work"
-export DATASET="$RUN_ROOT/data/Twin-2K-500"
-export QWEN=/path/to/Qwen2.5-0.5B-Instruct
-export LIQUID=/path/to/LFM2.5-350M
-export EMBEDDING=/path/to/Qwen3-Embedding-0.6B
-
-python experiments/01_pilot/download_data.py --destination "$DATASET"
-python experiments/01_pilot/prepare_data.py --root "$RUN_ROOT" --dataset-dir "$DATASET"
-```
-
-Replace model paths with your local snapshots. Preparation checks dataset revision `f883165a3026fde855dfd448e0cd16443ab257b6` and the participant split. To reuse an existing compatible split, pass `--split-manifest /path/to/participant_split.csv` to preparation.
-
-Preview the pilot pipeline; replace `plan` with `run` to execute:
+Use Python 3.12 and run from the repository root. Inspect a synthetic input and its exact prompt without installing model dependencies:
 
 ```bash
-python experiments/01_pilot/run_experiments.py plan \
-  --experiments qwen_full --workspace "$RUN_ROOT" --dataset-dir "$DATASET" \
-  --qwen-model "$QWEN" --liquid-model "$LIQUID"
+python scripts/infer_adapter.py --input examples/full_b_binary.json --dry-run
 ```
 
-Other groups: `qwen_lora`, `liquid_lora`, `liquid_full`, `cv`. Dependencies run first. Full-B training requires the genuine Qwen full-tuning and Liquid LoRA metadata produced by this chain; retain the three-epoch schedule when reproducing the epoch-1 result. Use `experiments/setup/prepare_workspace.py --workspace "$RUN_ROOT"` to stage the Full-B scripts.
+For a CPU inference demo, install these dependencies in a virtual environment. The final command downloads the external base model on first use:
 
-Use fresh output directories. Historical runs require their original frozen source, model snapshots and environment; this README update does not rerun training or inference.
+```bash
+python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install transformers==5.2.0 peft==0.18.0 accelerate==1.12.0 safetensors
+python scripts/infer_adapter.py --input examples/full_b_binary.json --base-model Qwen/Qwen2.5-0.5B-Instruct --device cpu
+```
+
+Output is JSON with the generated text, parsed answer and validity flag. The binary example accepts `1` or `2`; the numeric example accepts a number in `0–100`. These examples demonstrate the interface and have no asserted correct prediction. See [inference details](docs/INFERENCE.md) for CUDA, local model paths, supported inputs and output constraints.
+
+This demo uses the trained prompt builders with the supplied A excerpt. Reproducing reported scores also requires the original split, A-selection policy and scoring protocol; see [experiment reproduction](docs/REPRODUCTION.md). Historical training used Linux, PyTorch 2.8.0 and a 48 GB NVIDIA GPU.
+
+Run the focused CPU checks with `python -m unittest discover -s tests -v`.
 
 ## References
 

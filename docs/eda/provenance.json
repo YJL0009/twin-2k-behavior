@@ -1,0 +1,56 @@
+{
+  "protocol": "training-a-b-eda-and-archived-validation-retest-v1",
+  "dataset_revision": "f883165a3026fde855dfd448e0cd16443ab257b6",
+  "script_sha256": "6c7ce49e904403dceb801e8bbf30acbd435428f0a14dfbdee9ed524c165784a8",
+  "validation_archive_hashes": {
+    "comparison.csv": "2ba00bf10e83139d782f4992a36beff9fd3cb5356828c67e4af005be9a307d6d",
+    "run_config.json": "045685165c1abc85e5e79c26d173883a9594f4fe8a4b0c6284b333494684a06d"
+  },
+  "new_raw_C_answers_read": false,
+  "test_scored": false,
+  "raw_training_audit_run": true,
+  "training_audit": {
+    "revision": "f883165a3026fde855dfd448e0cd16443ab257b6",
+    "data_hashes": {
+      "question_catalog_and_human_response_csv/question_catalog.json": "e72e305f0c7c83bb990e97de4c0cf2c718ead18cc197239b7feeb354c9ac1bef",
+      "question_catalog_and_human_response_csv/wave1_3_response.csv": "fc227b1682e2654fd4b2a8152294b68118c0e3be4d83f4a9af5f3e96df56d3f0",
+      "wave_split/chunks/wave_persona_chunk_001.parquet": "dd92be4ac50d3476dc0166f7b6b2fdb07ff6e167c379f62d1b7730905135753b",
+      "wave_split/chunks/wave_persona_chunk_002.parquet": "77ed5561e0f02e07237437b1ce88a409f02a02839e7400ad392bc24193469bf1",
+      "wave_split/chunks/wave_persona_chunk_003.parquet": "c856865424fea528c928c4dd5e29efb0c69a8fb7bf79d5d17443e321c1083bd9",
+      "wave_split/chunks/wave_persona_chunk_004.parquet": "3c88d726d7b5f8bda1e950c5ef00e757bef2abebfbdce144f9c81d7c4ff36f33",
+      "wave_split/chunks/wave_persona_chunk_005.parquet": "2b8d46f79c9e25e58aae266397e46d572bda27f42c4b18fadc8f110f3ad833d7",
+      "wave_split/chunks/wave_persona_chunk_006.parquet": "f7e7a94a900596d7682f389ccab5c3bee3a85737d9fb08828937ce4c45c90abe",
+      "wave_split/chunks/wave_persona_chunk_007.parquet": "919910a97d84fc8b437d380dba8aebea3430436e382419a9874a0485109bf296"
+    },
+    "raw_analysis_split": "train",
+    "participants": 1440,
+    "split_sizes": {
+      "train": 1440,
+      "validation": 309,
+      "test": 309
+    },
+    "split_manifest_sha256": null,
+    "split_recipe": "string-sorted PIDs; seed 42; PID 574 reserved train; 1440/309/309",
+    "parquet_columns_selected": [
+      "pid",
+      "wave1_3_persona_json",
+      "wave4_Q_wave1_3_A"
+    ],
+    "C_column_selected": false,
+    "wave4_response_csv_opened": false,
+    "test_answer_cells_analyzed": 0,
+    "a_stored_record_histogram": {
+      "158": 1415,
+      "156": 4,
+      "157": 21
+    },
+    "a_record_types": {
+      "MC": 154077,
+      "Matrix": 41760,
+      "TE": 31654
+    },
+    "unresolved_demographic_variables": {},
+    "demographic_selection": "exact pinned-catalog Demographics block/QIDs",
+    "demographic_small_cell_policy": "pool categories under 5; add next smallest category if pooled total is under 5"
+  }
+}

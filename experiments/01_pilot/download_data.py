@@ -3,7 +3,7 @@
 
 No participant data are included in the public source archive. Hugging Face is
 only used when this command runs; existing local files can instead be selected
-with ``prepare_data.py --dataset-root /path/to/Twin-2K-500``.
+with ``prepare_data.py --dataset-dir /path/to/Twin-2K-500``.
 """
 import argparse
 import hashlib

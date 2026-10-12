@@ -1,0 +1,23 @@
+{
+  "description": "Synthetic format demonstration only. These are invented questions and answers, not a Twin-2K-500 participant or an evaluated prediction.",
+  "a_units": [
+    {
+      "BlockName": "Synthetic earlier preferences",
+      "PrecedingDisplayInstructions": [],
+      "Question": {
+        "QuestionID": "SYNTHETIC_A1",
+        "QuestionType": "MC",
+        "QuestionText": "Which drink do you usually choose?",
+        "Options": ["Tea", "Coffee", "Water"],
+        "Answers": {"SelectedByPosition": 1, "SelectedText": "Tea"}
+      }
+    }
+  ],
+  "target_item": {
+    "family": "bounded_numeric",
+    "trained_binary": false,
+    "target_text": "How likely are you to buy a reusable cup?\n\nAnswer for this statement only:\nBuying a reusable cup within the next month\n\nAllowed numeric range: 0 to 100 (inclusive).",
+    "lower": 0,
+    "upper": 100
+  }
+}

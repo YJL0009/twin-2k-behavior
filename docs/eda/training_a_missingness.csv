@@ -1,0 +1,381 @@
+block,qid,question,participants,present,record_absent,answer_empty_among_present,matrix_declared_rows,matrix_observed_selections,short_matrix_sequences
+Cognitive tests ,QID123,You just answered 42 questions that measured your performance on various cognitive tests. How many of these questions do you think you answered correctly? Enter a whole number between 0 and 42.,1440,1440,0,0,0,0,0
+Cognitive tests ,QID124,"How many of these questions do you think you people from a representative sample of the US adult population would answer correctly, on average? Enter a number between 0 and 42.",1440,1440,0,0,0,0,0
+Cognitive tests ,QID217,"You are now going to receive a series of four problems. You must decide whether the stated conclusion follows logically from the premises or not. You must suppose that the premises are all true and limit yourself only to the information contained in these premises. Premise 1: If there is a postal strike, then unemployment will double. Premise 2: There is a postal strike. Conclusion: Unemployment will double. Does the conclusion follow logically from the premises ?",1440,1440,0,0,0,0,0
+Cognitive tests ,QID218,"Premise 1: If the winter is harsh, then there will be a flu epidemic. Premise 2: The winter is harsh. Conclusion: There will be a flu epidemic. Does the conclusion follow logically from the premises ?",1440,1440,0,0,0,0,0
+Cognitive tests ,QID219,"Premise 1: If a car is a Honda, then it is expensive. Premise 2: A car is a Honda. Conclusion: The car is expensive. Does the conclusion follow logically from the premises ?",1440,1440,0,0,0,0,0
+Cognitive tests ,QID220,"Premise 1: If a person eats hamburgers, then they will get cancer. Premise 2: A person eats hamburgers. Conclusion: The person will get cancer. Does the conclusion follow logically from the premises ?",1440,1440,0,0,0,0,0
+Cognitive tests ,QID221,"Imagine you see a number of cards from a set of cards. Each card in the set has a capital letter on one side and a number on the other. Naturally, only one side is visible in each case. For the set of cards, a rule has been stated: If there is an A on the letter side of the card, then there is a 3 on the number side. Four cards were drawn. Below is the information visible for each card (letter or number). Which of the following card(s) would have to be turned over in order to test the truth or falsity of the rule?",1440,1439,1,0,0,0,0
+Cognitive tests ,QID268,"If a glock is not a XAR, you can say:",1440,1440,0,0,0,0,0
+Cognitive tests ,QID269,"If a koy is a YOF, you can say:",1440,1440,0,0,0,0,0
+Cognitive tests ,QID270,"If a koy is not a YOF, you can say:",1440,1440,0,0,0,0,0
+Cognitive tests ,QID271,Premise 1: All animals love water. Premise 2: Plants do not love water. Conclusion: Plants are not animals. Does the conclusion follow logically from the premises ?,1440,1440,0,0,0,0,0
+Cognitive tests ,QID272,Premise 1: All animals with four legs are dangerous. Premise 2: Poodles are not dangerous. Conclusion: Poodles do not have four legs. Does the conclusion follow logically from the premises ?,1440,1440,0,0,0,0,0
+Cognitive tests ,QID273,Premise 1: All eastern countries are communist. Premise 2: China is not an eastern country. Conclusion: China is not communist. Does the conclusion follow logically from the premises ?,1440,1440,0,0,0,0,0
+Cognitive tests ,QID274,Premise 1: All flowers have petals. Premise 2: Roses have petals. Conclusion: Roses are flowers. Does the conclusion follow logically from the premises ?,1440,1440,0,0,0,0,0
+Cognitive tests ,QID275,Premise 1: All mammals swim. Premise 2: Whales are mammals. Conclusion: Whales swim. Does the conclusion follow logically from the premises ?,1440,1440,0,0,0,0,0
+Cognitive tests ,QID276,Premise 1: All unemployed people are poor. Premise 2: Rockefeller is not unemployed. Conclusion: Rockefeller is not poor. Does the conclusion follow logically from the premises ?,1440,1440,0,0,0,0,0
+Cognitive tests ,QID277,Premise I: All things that have a motor need oil. Premise 2: Bicycles need oil. Conclusion: Bicycles have motors. Does the conclusion follow logically from the premises ?,1440,1440,0,0,0,0,0
+Cognitive tests ,QID278,"Suppose that it is true that: All the XAR's are YOF's. With this in mind, answer the following questions. If a glock is a XAR, you can say:",1440,1440,0,0,0,0,0
+Cognitive tests ,QID279,You are now going to receive a series of eight problems. You must decide whether the stated conclusion follows logically from the premises or not. You must suppose that the premises are all true and limit yourself only to the information contained in these premises. Premise 1: All things that are smoked are good for the health. Premise 2: Cigarettes are smoked. Conclusion: Cigarettes are good for the health. Does the conclusion follow logically from the premises ?,1440,1440,0,0,0,0,0
+Cognitive tests ,QID36,"Do you think that the following statement is true or false? ""A 15-year mortgage typically requires higher monthly payments than a 30-year mortgage, but the total interest paid over the life of the loan will be less.""",1440,1440,0,0,0,0,0
+Cognitive tests ,QID37,"Imagine that the interest rate on your saving account was 1% per year and inflation was 2% per year. After 1 year, would you be able to buy:",1440,1440,0,0,0,0,0
+Cognitive tests ,QID38,"Normally, which asset described below displays the highest fluctuations over time?",1440,1439,1,0,0,0,0
+Cognitive tests ,QID39,"Do you think that the following statement is true or false? ""If you were to invest $1,000 in a stock mutual fund, it would be possible to have less than $1,000 when you withdraw your money.""",1440,1440,0,0,0,0,0
+Cognitive tests ,QID40,"When an investor spreads their money among different assets, the risk of losing a lot of money:",1440,1440,0,0,0,0,0
+Cognitive tests ,QID41,"Considering a long time period (for example 10 or 20 years), which asset described below normally gives the highest return?",1440,1439,1,0,0,0,0
+Cognitive tests ,QID42,"Do you think that the following statement is true or false? ""After age 70 and a half, you have to withdraw at least some money from your 401(k) plan or IRA.""",1440,1440,0,0,0,0,0
+Cognitive tests ,QID43,"Suppose you owe $3,000 on your credit card. You pay a minimum payment of $30 each month. At an Annual Percentage Rate of 12% (or 1% per month), how many years would it take to eliminate your credit card debt if you made no additional new charges? Enter a number of years, or ""never"" if the debt will never be eliminated.",1440,1440,0,0,0,0,0
+Cognitive tests ,QID44,"Imagine that we roll a fair, six-sided die 1,000 times. Out of 1,000 rolls, how many times do you think the die would come up as an even number? Which is the most likely outcome? Enter a number from 0 to 1,000.",1440,1440,0,0,0,0,0
+Cognitive tests ,QID45,"In the BIG BUCKS LOTTERY, the chance of winning a $10.00 prize is 1%. What is your best guess about how many people would win a $10.00 prize if 1,000 people each buy a single ticket from BIG BUCKS? Enter a number from 0 to 1,000.",1440,1440,0,0,0,0,0
+Cognitive tests ,QID46,"If the chance of getting a disease is 20 out of 100, this would be the same as having a [blank]% chance of getting the disease. Enter a percentage from 0 to 100.",1440,1440,0,0,0,0,0
+Cognitive tests ,QID47,"In the ACME PUBLISHING SWEEPSTAKES, the chance of winning a car is 1 in 1,000. What percent of tickets of ACME PUBLISHING SWEEPSTAKES win a car? Enter a percentage from 0 to 100.",1440,1440,0,0,0,0,0
+Cognitive tests ,QID48,"If the chance of getting a disease is 10%, how many people would be expected to get the disease out of 1,000? Enter a number from 0 to 1,000.",1440,1440,0,0,0,0,0
+Cognitive tests ,QID49,"If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets? Enter a number of minutes.",1440,1440,0,0,0,0,0
+Cognitive tests ,QID50,A bat and ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Enter a number in dollars.,1440,1440,0,0,0,0,0
+Cognitive tests ,QID51,"In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake? Enter a number of days.",1440,1440,0,0,0,0,0
+Cognitive tests ,QID52,Emily’s father has three daughters. The first two are named April and May. What is the third daughter’s name?,1440,1440,0,0,0,0,0
+Cognitive tests ,QID53,How many cubic feet of dirt are there in a hole that is 3’ deep x 3’ wide x 3’ long? Enter a number of cubic feet.,1440,1440,0,0,0,0,0
+Cognitive tests ,QID54,"If you’re running a race and you pass the person in second place, what place are you in? Enter a number.",1440,1440,0,0,0,0,0
+Cognitive tests ,QID55,A farmer had 15 sheep and all but 8 died. How many are left? Enter a number,1440,1440,0,0,0,0,0
+Cognitive tests ,QID56,"Please indicate which is the best answer to solve the puzzle below. 
+
+Puzzle Grid (3x3 Matrix)
+
+Each cell in a 3x3 matrix contains a circle with an arrow pointing in one of four directions (up, down, left, right) and sometimes includes a diagonal or horizontal/vertical line inside the circle. We'll label the grid as follows:
+
+Top row (Row 1):
+  Cell 1-1: Plain circle with arrow pointing up.
+  Cell 1-2: Plain circle with arrow pointing right.
+  Cell 1-3: Plain circle with arrow pointing down.
+
+Middle row (Row 2):
+  Cell 2-1: Circle with a horizontal line, arrow pointing left.
+  Cell 2-2: Circle with a horizontal line, arrow pointing up.
+  Cell 2-3: Circle with a horizontal line, arrow pointing right.
+
+Bottom row (Row 3):
+  Cell 3-1: Circle with a diagonal line from top-left to bottom-right, arrow pointing down.
+  Cell 3-2: Circle with a diagonal line from top-left to bottom-right, arrow pointing left.
+  Cell 3-3: Missing (marked with a question mark – this is what we are trying to determine).
+
+Answer Choices (Labeled A to F):
+  Each option consists of a circle, possibly with an internal line, and an arrow in a particular direction.
+  A: Circle with horizontal line, arrow pointing up.
+  B: Circle with diagonal line (top-left to bottom-right), arrow pointing left.
+  C: Plain circle, arrow pointing left.
+  D: Circle with diagonal line (top-left to bottom-right), arrow pointing right.
+  E: Circle with diagonal line (top-left to bottom-right), arrow pointing down.
+  F: Plain circle, arrow pointing up-right (diagonal).
+",1440,1440,0,0,0,0,0
+Cognitive tests ,QID57,"Please indicate which is the best answer to complete the figure below.
+
+STRUCTURE OF THE IMAGE:
+The image is a 3x3 grid of figures (3 rows, 3 columns), with a six-option answer key (A-F) shown below the grid. The bottom-right cell of the 3x3 grid has a question mark (?) indicating a missing figure that needs to be deduced.
+
+Each figure in the grid consists of a main geometric shape (e.g., circle, square, triangle, etc.) and often one or more smaller shapes (e.g., small circles, squares, or stars) placed beside or inside it. Shapes are typically split into black and white sections, often diagonally or horizontally.
+
+GRID CONTENT:
+First Row (Top Row):
+  First Cell: A tall rectangle divided diagonally from top-left to bottom-right (left half black, right white). A small white circle sits above it.
+  Second Cell: A square divided diagonally from bottom-left to top-right (bottom-left black, top-right white). A small black circle sits to the left of the square.
+  Third Cell: A tall rectangle, identical to the first, with a small white circle below the rectangle.
+
+Second Row (Middle Row):
+  First Cell: A circle split horizontally in half (top half black, bottom half white). A small white star is on the right side.
+  Second Cell: A circle split vertically in half (left half black, right white). A small white star is above it.
+  Third Cell: A circle, again split horizontally (same as first), with the white star now on the left side.
+
+Third Row (Bottom Row):
+  First Cell: A vertical diamond shape split diagonally (top half white, bottom black). A small white square is to the left of the diamond.
+  Second Cell: A right-pointing triangle split diagonally (left half black, right white). A small white square is below the triangle.
+  Third Cell: A question mark (this is the missing figure to be deduced).
+
+ANSWER OPTIONS (A–F):
+  Each option is a figure with a main shape and a small white square positioned around it:
+  A: Diamond shape (top white, bottom black), with square to the left.
+  B: Right-pointing triangle (top black, bottom white), square below.
+  C: Diamond shape (top white, bottom black), square on right.
+  D: Right-pointing triangle (top white, bottom black), square below.
+  E: Diamond shape (top black, bottom white), no small square.
+  F: Right-pointing triangle (top black, bottom white), square on left.
+",1440,1440,0,0,0,0,0
+Cognitive tests ,QID58,"Please indicate which is the best answer to complete the puzzle below.
+Puzzle Description:
+
+The puzzle is a 3x3 grid of black and white squares, each containing a distinct symbol or shape. The goal is to determine which symbol best completes the missing square (marked by a question mark ?) in the third column of the third row.
+
+Grid Layout:
+Each cell has a black or white background, and a central shape with a contrasting color (either black or white). Here's the layout of the 3x3 grid, row by row:
+
+Row 1:
+  Cell 1: White circle with a black horizontal rectangle inside (centered).
+  Cell 2: Black background with a white cross shape; inside the cross is a black diamond.
+  Cell 3: White square with a black star in the center.
+
+Row 2:
+  Cell 1: Black background with a white square outline; inside is a black diamond.
+  Cell 2: White background with a black circle containing a white star.
+  Cell 3: White background with a question mark ? indicating the missing piece.
+
+Row 3:
+  Cell 1: Black background with a white cross shape; inside the cross is a black star.
+  Cell 2: White square with a black square inside.
+  Cell 3: Black background with a white diamond.
+
+Answer Choices (Labeled A–F):
+  Each choice is a black or white square with a symbol inside. Here's a breakdown:
+  A: Black background with a white cross; black diamond inside.
+  B: White background with a black cross; white diamond inside.
+  C: Black background with a white square; white star inside.
+  D: White background with a black cross; black square inside.
+  E: Black background with a white cross; black star inside.
+  F: Black circle with a white square inside.
+",1440,1440,0,0,0,0,0
+Cognitive tests ,QID59,"All the cubes below have a different image on each side. Select the choice that could represent a rotation of the cube labeled X
+
+Main Cube (X)
+Cube X shows three visible faces, each with a distinct symbol:
+  Top face: A thick black plus sign with round ends on each arm (a sort of ""medical cross"" shape).
+  Front-left face: A Y-shaped structure with three round nodes at the ends of each branch.
+  Front-right face: A vertical line with rounded dots at both ends (like a thick vertical barbell).
+
+Options (A to H)
+Each of the options (A through H) shows a cube with three visible faces, each displaying a symbol. The goal is to determine which of these could be a rotation of Cube X — meaning it shows the same three symbols in any orientation, but without showing any new or different symbols.
+
+Option A
+  Top: Same plus sign as X.
+  Front-left: Same Y-shaped symbol as X.
+  Front-right: An oval with an outline (not seen on X).
+
+Option B
+  Top: A six-armed asterisk or snowflake shape (not seen on X).
+  Front-left: Same vertical barbell symbol as X.
+  Front-right: Oval (not on X).
+
+Option C
+  Top: Six-armed asterisk (not on X).
+  Front-left: Oval (not on X).
+  Front-right: Y-shape (same as on X).
+
+Option D
+  A box saying: ""None of the cubes could be a rotation.""
+
+Option E
+  Top: Six-armed asterisk (not on X).
+  Front-left: Vertical barbell (same as X).
+  Front-right: An X shape with rounded ends (not on X).
+
+Option F
+  Top: Same plus sign as X.
+  Front-left: Vertical barbell (same as X).
+  Front-right: Oval (not on X).
+
+Option G
+  Top: Vertical barbell (same as X).
+  Front-left: Y-shape (same as X).
+  Front-right: X-shape with rounded ends (not on X).
+
+Option H
+  A box saying: ""I do not know the solution.""
+",1440,1440,0,0,0,0,0
+Cognitive tests ,QID60,"All the cubes below have a different image on each side. Select the choice that could represent a rotation of the cube labeled X
+
+Description of Cube X:
+Cube X has three visible faces, each with a different image:
+  Top face: a plus-shaped black symbol, with dots at the ends of each arm.
+  Left face: a Y-shaped black symbol with rounded ends.
+  Right face: a vertical bar with dots at both ends (like a dumbbell).
+
+Options:
+Each option (A to H) shows a cube with three visible faces. Only one may be a valid rotation of Cube X. Some options also include:
+  D: A box with the text: ""None of the cubes could be a rotation.""
+  H: A box with the text: ""I do not know the solution.""
+
+Here are the visible faces for each cube:
+Option A:
+  Top: bar with rounded ends (not vertical)
+  Left: Y-shaped figure
+  Right: Asterisk-like starburst symbol
+
+Option B:
+  Top: Y-shaped figure
+  Left: Asterisk/starburst
+  Right: Vertical bar with dots at ends (like Cube X)
+
+Option C:
+  Top: Asterisk/starburst
+  Left: Vertical bar with dots
+  Right: X-shaped figure
+
+Option E:
+  Top: Y-shaped figure
+  Left: Hollow oval ring
+  Right: X-shaped figure
+
+Option F:
+  Top: Asterisk/starburst
+  Left: Vertical bar with dots
+  Right: Hollow oval ring
+
+Option G:
+  Top: Asterisk/starburst
+  Left: Hollow oval ring
+  Right: Y-shaped figure
+",1440,1440,0,0,0,0,0
+Cognitive tests ,QID61,"All the cubes below have a different image on each side. Select the choice that could represent a rotation of the cube labeled X
+
+The Task: You are given a cube labeled X and asked to find which one of the other cubes (A–C, E–G) could be a rotation of cube X. This means that the cube has the same symbols on the same faces, just oriented differently.
+
+Cube X Description: Cube X shows three visible faces, each with a different symbol:
+  A face with a plus-sign made of thick black bars, arranged diagonally (like an ""X"").
+  A face with a Y-shaped symbol with thick dots at the ends.
+  A face with a dumbbell-shaped symbol (a short line with dots at both ends).
+
+Answer Choices:
+  Cube A: Shows:
+    The dumbbell.
+    The plus/X symbol.
+    The Y-shape.
+
+  Cube B: Shows:
+    The plus/X symbol.
+    The dumbbell.
+    A thick circle or ring (not on Cube X).
+
+  Cube C: Shows:
+    A different, more complex starburst-like symbol (not on Cube X).
+    The dumbbell.
+    The circle/ring.
+
+  Cube D: States: ""None of the cubes could be a rotation.""
+
+  Cube E: Shows:
+    A complex starburst.
+    The plus/X symbol.
+    The dumbbell.
+
+  Cube F: Shows:
+    A starburst symbol.
+    The Y-shape.
+    The circle/ring.
+
+  Cube G: Shows:
+    The dumbbell.
+    A starburst.
+    The plus/X symbol.
+
+  Cube H: States: ""I do not know the solution.""",1440,1440,0,0,0,0,0
+Cognitive tests ,QID63,Synonym: Select the word that is most nearly the same in meaning as CONCUR,1440,1440,0,0,0,0,0
+Cognitive tests ,QID64,Synonym: Select the word that is most nearly the same in meaning as CONFISCATE,1440,1440,0,0,0,0,0
+Cognitive tests ,QID65,Synonym: Select the word that is most nearly the same in meaning as SOLICIT,1440,1440,0,0,0,0,0
+Cognitive tests ,QID66,Synonym: Select the word that is most nearly the same in meaning as FURTIVE,1440,1440,0,0,0,0,0
+Cognitive tests ,QID67,Synonym: Select the word that is most nearly the same in meaning as ASTUTE,1440,1440,0,0,0,0,0
+Cognitive tests ,QID68,Synonym: Select the word that is most nearly the same in meaning as COVET,1440,1440,0,0,0,0,0
+Cognitive tests ,QID69,Synonym: Select the word that is most nearly the same in meaning as OSCILLATE,1440,1440,0,0,0,0,0
+Cognitive tests ,QID70,Synonym: Select the word that is most nearly the same in meaning as INDOLENT,1440,1440,0,0,0,0,0
+Cognitive tests ,QID71,Synonym: Select the word that is most nearly the same in meaning as DISPARITY,1440,1440,0,0,0,0,0
+Cognitive tests ,QID72,Synonym: Select the word that is most nearly the same in meaning as INDIGENT,1440,1440,0,0,0,0,0
+Cognitive tests ,QID74,Antonym: Select the word that is most nearly the opposite in meaning to SATED,1440,1440,0,0,0,0,0
+Cognitive tests ,QID75,Antonym: Select the word that is most nearly the opposite in meaning to COMPLAISANT,1440,1440,0,0,0,0,0
+Cognitive tests ,QID76,Antonym: Select the word that is most nearly the opposite in meaning to ALOOF,1440,1440,0,0,0,0,0
+Cognitive tests ,QID77,Antonym: Select the word that is most nearly the opposite in meaning to ABOMINATE,1440,1440,0,0,0,0,0
+Cognitive tests ,QID78,Antonym: Select the word that is most nearly the opposite in meaning to VERBOSE,1440,1440,0,0,0,0,0
+Cognitive tests ,QID79,Antonym: Select the word that is most nearly the opposite in meaning to DEARTH,1440,1440,0,0,0,0,0
+Cognitive tests ,QID80,Antonym: Select the word that is most nearly the opposite in meaning to SPORADIC,1440,1440,0,0,0,0,0
+Cognitive tests ,QID81,Antonym: Select the word that is most nearly the opposite in meaning to CORPULENT,1440,1440,0,0,0,0,0
+Cognitive tests ,QID82,Antonym: Select the word that is most nearly the opposite in meaning to GERMANE,1440,1440,0,0,0,0,0
+Cognitive tests ,QID83,Antonym: Select the word that is most nearly the opposite in meaning to VACUOUS,1440,1440,0,0,0,0,0
+Demographics,QID11,Which part of the United States do you currently live in?,1440,1440,0,0,0,0,0
+Demographics,QID12,What is the sex that you were assigned at birth?,1440,1440,0,0,0,0,0
+Demographics,QID13,How old are you?,1440,1440,0,0,0,0,0
+Demographics,QID14,What is the highest level of schooling or degree that you have completed?,1440,1440,0,0,0,0,0
+Demographics,QID15,What is your race or origin?,1440,1440,0,0,0,0,0
+Demographics,QID16,Are you a citizen of the United States?,1440,1440,0,0,0,0,0
+Demographics,QID17,Which of these best describes you?,1440,1440,0,0,0,0,0
+Demographics,QID18,"What is your present religion, if any?",1440,1440,0,0,0,0,0
+Demographics,QID19,"Aside from weddings and funerals, how often do you attend religious services?",1440,1440,0,0,0,0,0
+Demographics,QID20,"In politics today, do you consider yourself a",1440,1440,0,0,0,0,0
+Demographics,QID21,"Last year, what was your total family income from all sources, before taxes?",1440,1440,0,0,0,0,0
+Demographics,QID22,"In general, would you describe your political views as",1440,1440,0,0,0,0,0
+Demographics,QID23,"Including yourself, how many people currently live in your household?",1440,1440,0,0,0,0,0
+Demographics,QID24,What is your current employment status?,1440,1440,0,0,0,0,0
+Economic preferences ,QID117,"Suppose you were given $5 and had to decide how much of this money to keep for yourself and how much to send to another (anonymous) person. Any amount you send to the other person would then be tripled. That is, if you send $1, this becomes $3. If you send $2, this becomes $6, etc. Then, the other person would have to decide how much of that money to keep and how much to return to you. That is, if you send $1, this would become $3 and the other person would have to decide how much of this $3 to keep for themself and how much to send back to you. In this scenario, how much would keep for yourself and how much would you send to the other person?",1440,1440,0,0,0,0,0
+Economic preferences ,QID118,"Suppose now that you are playing this game as the other person, i.e., the receiver. For each amount that you may receive, how much would you keep for yourself and how much would send back to the other person? If the person sends me $5 (which would become $15):",1440,1440,0,0,0,0,0
+Economic preferences ,QID119,If the person sends me $4 (which would become $12):,1440,1440,0,0,0,0,0
+Economic preferences ,QID120,If the person sends me $3 (which would become $9):,1440,1440,0,0,0,0,0
+Economic preferences ,QID121,If the person sends me $2 (which would become $6):,1440,1440,0,0,0,0,0
+Economic preferences ,QID122,If the person sends me $1 (which would become $3):,1440,1440,0,0,0,0,0
+Economic preferences ,QID149,"Person A was given tickets to lotteries involving the World Series. They won $50 in one lottery and $25 in the other. Person B was given a ticket to a single, larger World Series lottery. They won $75. Who was happier?",1440,1440,0,0,0,0,0
+Economic preferences ,QID150,Person A received a letter from the IRS saying that they made a minor arithmetical mistake on their tax return and owed $100. They received a similar letter the same day from their state income tax authority saying they owed $50. There were no other repercussions from either mistake. Person B received a letter from the IRS saying that they made a minor arithmetical mistake on their tax return and owed $150. There were no other repercussions from either mistake. Who was more upset?,1440,1440,0,0,0,0,0
+Economic preferences ,QID151,"Person A bought their first New York State lottery ticket and won $100. Also, in a freak accident, they damaged the rug in their apartment and had to pay the landlord $80. Person B bought their first New York State lottery ticket and won $20. Who was happier?",1440,1440,0,0,0,0,0
+Economic preferences ,QID152,"Person A's car was damaged in a parking lot. They had to spend $200 to repair the damage. The same day the car was damaged, they won $25 in the office football pool. Person B's car was damaged in a parking lot. They had to spend $175 to repair the damage. Who was more upset?",1440,1440,0,0,0,0,0
+Economic preferences ,QID224,"Suppose you were given $5 and had to offer to another (anonymous) person a way to split the money. You would propose how much of this money to keep for yourself and how much to send them. Then, the other person would have to decide whether or not to accept your offer. If they accept your offer, you would each receive the amount specified in your offer. If they reject your offer, you would both receive nothing. In this scenario, how much would propose to keep for yourself and how much would you propose to send to the other person?",1440,1440,0,0,0,0,0
+Economic preferences ,QID225,"Suppose now that you are playing this game as the other person, i.e., the receiver. For each offer made by the sender, would you accept or reject the offer? If the person offers to keep $0 for themselves and send me $5:",1440,1440,0,0,0,0,0
+Economic preferences ,QID226,If the person offers to keep $1 for themselves and send me $4:,1440,1440,0,0,0,0,0
+Economic preferences ,QID227,If the person offers to keep $2 for themselves and send me $3:,1440,1440,0,0,0,0,0
+Economic preferences ,QID228,If the person offers to keep $3 for themselves and send me $2:,1440,1440,0,0,0,0,0
+Economic preferences ,QID229,If the person offers to keep $4 for themselves and send me $1:,1440,1440,0,0,0,0,0
+Economic preferences ,QID230,If the person offers to keep $5 for themselves and send me $0:,1440,1440,0,0,0,0,0
+Economic preferences ,QID231,"Suppose you were given $5 and had to split the money between yourself and another (anonymous) person. You and you only would decide how to split the money, the other person would need to accept your offer. In this scenario, how much would keep for yourself and how much would you send to the other person?",1440,1440,0,0,0,0,0
+Economic preferences ,QID244,"Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,14400,14400,0
+Economic preferences ,QID245,"Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,15840,15840,0
+Economic preferences ,QID246,"Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,12960,12960,0
+Economic preferences ,QID247,"Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,14400,14400,0
+Economic preferences ,QID248,"Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,15840,15840,0
+Economic preferences ,QID250,"In this question, the LOTTERY is a 50% chance of winning $6 and a 50% chance of winning $0.  Suppose you are given the option to exchange this lottery for certain amounts of money. Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,20160,20160,0
+Economic preferences ,QID251,"In this question, the LOTTERY is a 50% chance of winning $8 and a 50% chance of winning $2.  Suppose you are given the option to exchange this lottery for certain amounts of money. Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,20160,20160,0
+Economic preferences ,QID252,"In this question, the LOTTERY is a 50% chance of winning $10 and a 50% chance of winning $0.  Suppose you are given the option to exchange this lottery for certain amounts of money. Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,20160,20160,0
+Economic preferences ,QID271,"We are now interested in what you were thinking about while deciding how much of the money to keep for yourself and how much to send to another (anonymous) person, and when deciding how much would you keep for yourself and how much would send back to the other person. Any thought is fine; simply list what it was that you were thinking about while answering the questions. Below, please write down the first thought that you had in the first box, the second thought you had in the second box, etc. Please write only one idea per box. You should try to write only the thoughts that you were thinking during the task. Please state your thoughts concisely...one phrase is sufficient. Ignore spelling, grammar, and punctuation. Please be completely honest and list all of thoughts that you had. Don't worry if you don't fill every space. Just write down whatever thoughts you had while making the decision. First, please list the thoughts you had when deciding how much of the money to keep for yourself and how much to send to another (anonymous) person:",1440,1437,3,0,0,0,0
+Economic preferences ,QID272,"Second, please list the thoughts you had when deciding how much would you keep for yourself and how much would send back to the other person:",1440,1419,21,0,0,0,0
+Economic preferences ,QID275,"We are now interested in what you were thinking about while deciding how much of the money to keep for yourself and how much to send to another (anonymous) person. Any thought is fine; simply list what it was that you were thinking about while answering the questions. Below, please write down the first thought that you had in the first box, the second thought you had in the second box, etc. Please write only one idea per box. You should try to write only the thoughts that you were thinking during the task. Please state your thoughts concisely...one phrase is sufficient. Ignore spelling, grammar, and punctuation. Please be completely honest and list all of thoughts that you had. Don&#39;t worry if you don&#39;t fill every space. Just write down whatever thoughts you had while making the decision. Please list the thoughts you had when deciding how much of the money to keep for yourself and how much to send to another (anonymous) person :",1440,1440,0,0,0,0,0
+Economic preferences ,QID276,"In this question, the LOTTERY is a 50% chance of LOSING $6 (as indicated by the minus sign before $6) and a 50% chance of winning $0.  Suppose you are given the option to exchange this lottery for certain amounts of money. The alternative also involves losing money, as indicated by the minus sign. Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,20160,20160,0
+Economic preferences ,QID277,"In this question, the LOTTERY is a 50% chance of LOSING $8 and a 50% chance of LOSING $2 (as indicated by the minus sign before $8 and $2).  Suppose you are given the option to exchange this lottery for certain amounts of money. The alternative also involves losing money, as indicated by the minus sign. Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,20160,20160,0
+Economic preferences ,QID278,"In this question, the LOTTERY is a 50% chance of LOSING $10 (as indicated by the minus sign before $10) and a 50% chance of winning $0.  Suppose you are given the option to exchange this lottery for certain amounts of money. The alternative also involves losing money, as indicated by the minus sign. Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,20160,20160,0
+Economic preferences ,QID279,"In this question, the LOTTERY is a 50% chance of LOSING $8 (as indicated by the minus sign before $8) and a 50% chance of winning a value x.  Suppose you are given the option to exchange this lottery for the certainty of winning $0. Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left gets better as one goes down the list while the option on the right stays the same. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,20160,20160,0
+Economic preferences ,QID84,"Please choose between the following options. For each line in the list, you must choose between the option on the left and the option on the right. Note that on each line, the option on the left stays the same while the option on the right gets better as one goes down the list. You can select the option you would prefer receiving by clicking on the button next to that option.",1440,1440,0,0,12960,12960,0
+Forward Flow,QID10,"On this page, starting with the word paper, your job is to write down the next word that follows in your mind from the previous word. Please put down only single words, and do not use proper nouns (such as names, brands, etc.). There is no right or wrong answer, just write the words as they come to your mind.",1440,1438,2,0,0,0,0
+Personality ,QID125,How much have you been bothered by each of the following symptoms over the past week?,1440,1440,0,0,30240,30240,0
+Personality ,QID126,,1440,1440,0,0,0,0,0
+Personality ,QID128,,1440,1440,0,0,0,0,0
+Personality ,QID129,,1440,1440,0,0,0,0,0
+Personality ,QID130,,1440,1440,0,0,0,0,0
+Personality ,QID131,,1440,1440,0,0,0,0,0
+Personality ,QID132,,1440,1440,0,0,0,0,0
+Personality ,QID133,,1440,1440,0,0,0,0,0
+Personality ,QID134,,1440,1440,0,0,0,0,0
+Personality ,QID136,,1440,1440,0,0,0,0,0
+Personality ,QID137,,1440,1440,0,0,0,0,0
+Personality ,QID138,,1440,1440,0,0,0,0,0
+Personality ,QID139,,1440,1440,0,0,0,0,0
+Personality ,QID140,,1440,1440,0,0,0,0,0
+Personality ,QID141,,1440,1440,0,0,0,0,0
+Personality ,QID142,,1440,1440,0,0,0,0,0
+Personality ,QID143,,1440,1440,0,0,0,0,0
+Personality ,QID144,,1440,1440,0,0,0,0,0
+Personality ,QID145,,1440,1440,0,0,0,0,0
+Personality ,QID146,,1440,1440,0,0,0,0,0
+Personality ,QID147,,1440,1440,0,0,0,0,0
+Personality ,QID148,I am purposely trying to lose weight by eating less,1440,1440,0,0,0,0,0
+Personality ,QID232,Please indicate your agreement with each of the following statements about yourself.,1440,1440,0,0,28800,28800,0
+Personality ,QID233,Following are a number of characteristics that may or may not apply to you. Please indicate next to each statement the extent to which you agree or disagree with that statement.,1440,1440,0,0,23040,23040,0
+Personality ,QID234,Here are a number of characteristics that may or may not apply to you. Please indicate next to each statement the extent to which you agree or disagree with that statement.,1440,1440,0,0,17280,17280,0
+Personality ,QID235,Here are a number of characteristics that may or may not apply to you. Please indicate next to each statement the extent to which you agree or disagree with that statement.,1440,1440,0,0,8640,8640,0
+Personality ,QID236,Here are a number of characteristics that may or may not apply to you. Please indicate next to each statement the extent to which that statement is true or false.,1440,1440,0,0,18720,18720,0
+Personality ,QID237,Please indicate your agreement with each of the following statements about yourself.,1440,1440,0,0,17280,17280,0
+Personality ,QID238,Please indicate your agreement with each of the following statements about yourself.,1440,1440,0,0,21600,21600,0
+Personality ,QID239,Please indicate your agreement with each of the following statements about yourself.,1440,1440,0,0,8640,8640,0
+Personality ,QID25,Here are a number of characteristics that may or may not apply to you. Please indicate next to each statement the extent to which you agree or disagree with that statement. I see myself as someone who...,1440,1440,0,0,63360,63360,0
+Personality ,QID26,Here are a number of characteristics that may or may not apply to you. Please indicate next to each statement the extent to which you agree or disagree with that statement.,1440,1440,0,0,25920,25920,0
+Personality ,QID268,"In this task we would like you to write about the type of person you aspire to be vs. the person you ought to be vs. the person you actually are. 1. Please describe the type of person you aspire to be. That is, write about the traits and behaviors you would like ideally to possess, your ultimate goals for yourself. Please write at least 3 sentences.",1440,1440,0,0,0,0,0
+Personality ,QID269,"2. Please describe the type of person you ought to be . That is, write about the traits and behaviors attributes that you should or ought to possess, based on your responsibilities and what other people expect from you. Please write at least 3 sentences.",1440,1440,0,0,0,0,0
+Personality ,QID27,Listed below are a number of statements concerning personal attributes and traits. Read each item and decide whether the statement is true or false as it pertains to your personally.,1440,1440,0,0,18720,18720,0
+Personality ,QID270,"3. Please describe the type of person you actually are . That is, write about the traits and behaviors you actually possess. Please write at least 3 sentences.",1440,1440,0,0,0,0,0
+Personality ,QID28,Here are a number of characteristics that may or may not apply to you. Please indicate next to each statement the extent to which it is true or untrue.,1440,1440,0,0,14400,14386,14
+Personality ,QID29,"Below are 24 different values that people rate of different importance in their lives. FIRST READ THROUGH THE LIST to familiarize yourself with all the values. While reading over the list, consider which ones tend to be most important to you and which tend to be least important to you. After familiarizing yourself with the list, rate the relative importance of each value to you as “A GUIDING PRINCIPLE IN MY LIFE.” It is important to spread your ratings out as best you can—be sure to use some numbers in the lower range, some in the middle range, and some in the higher range. Avoid using too many similar numbers. Work fairly quickly.",1440,1440,0,0,34560,34477,38
+Personality ,QID30,Following are a number of characteristics that may or may not apply to you. Please indicate next to each statement the extent to which that statement accurately or inaccurately describes you.,1440,1440,0,0,11520,11520,0
+Personality ,QID31,Which of the following best describes your spending habits?,1440,1440,0,0,0,0,0
+Personality ,QID32,"Some people have trouble limiting their spending: they often spend money - for example on clothes, meals, vacations - when they would do better not to. How well does the first description fit you? That is, do you have trouble limiting your spending?",1440,1440,0,0,0,0,0
+Personality ,QID33,"Other people have trouble spending money. Perhaps because spending money makes them anxious, they often don't spend money on things they should spend it on. How well does the second description fit you? That is, do you have trouble spending money?",1440,1440,0,0,0,0,0
+Personality ,QID34,"Following is a scenario describing the behavior of two shoppers. After reading about each shopper, please answer the question that follows. Mr. A is accompanying a good friend who is on a shopping spree at a local mall. When they enter a large department store, Mr. A sees that the store has a ""one-day-only-sale"" where everything is priced 10-60% off. He realizes that he doesn't need anything, yet can't resist and ends up spending almost $100 on stuff. Mr. B is accompanying a good friend who is on a shopping spree at a local mall. When they enter a large department store, Mr. B sees that the store has a ""one-day-only-sale"" where everything is priced 10-60% off. He figures that he can get great deals on many items that he needs, yet the thought of spending the money keeps him from buying the stuff. In terms of your own behavior, who are you more similar to, Mr. A or Mr. B?",1440,1440,0,0,0,0,0
+Personality ,QID35,Please indicate your agreement with each of the following statements about yourself.,1440,1440,0,0,17280,17280,0

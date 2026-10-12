@@ -1,0 +1,11 @@
+split,group,label,description,unit,metric,score,question_ids,paired_scalar_responses,participants,aggregation
+validation,pricing_40,Pricing,Pricing,agreement proportion,Agreement ↑,0.8400485436893204,40,12360,309,question_macro
+validation,original_9_binary,Pilot binary subset,Pilot binary subset,agreement proportion,Agreement ↑,0.7673093643213529,9,1545,309,question_macro
+validation,family:matrix_nominal,Nominal matrix,Nominal matrix,agreement proportion,Agreement ↑,0.7527817413686979,2,2498,309,question_macro
+validation,family:ordinal,Ordinal,Ordinal,normalized difference,Normalized absolute difference ↓,0.15572561120337333,19,2472,309,question_macro
+validation,family:matrix_ordinal,Ordinal matrix,Ordinal matrix,normalized difference,Normalized absolute difference ↓,0.15258028532539833,5,6489,309,question_macro
+validation,family:bounded_numeric,Bounded numeric,Bounded numeric,normalized difference,Normalized absolute difference ↓,0.1810388296438557,5,3708,309,question_macro
+validation,qid:QID164,QID164,Number of African countries in the UN; preceding anchor: 12 countries,countries,Raw mean absolute difference ↓,10.355704697986576,1,149,149,single_question
+validation,qid:QID166,QID166,Number of African countries in the UN; preceding anchor: 65 countries,countries,Raw mean absolute difference ↓,46.33125,1,160,160,single_question
+validation,qid:QID168,QID168,Height of the tallest redwood; preceding anchor: 85 feet,feet,Raw mean absolute difference ↓,66.072049689441,1,161,161,single_question
+validation,qid:QID170,QID170,"Height of the tallest redwood; preceding anchor: 1,000 feet",feet,Raw mean absolute difference ↓,432.7074324324324,1,148,148,single_question

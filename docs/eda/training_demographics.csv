@@ -1,0 +1,36 @@
+split,variable,block,qid,question,category,count,denominator,percent
+train,US region,Demographics,QID11,Which part of the United States do you currently live in?,"South (TX, OK, AR, LA, KY, TN, MS, AL, WV, DC, MD, DE, VA, NC, SC, GA, FL)",565,1440,39.236111111111114
+train,US region,Demographics,QID11,Which part of the United States do you currently live in?,"West (WA, OR, ID, MT, WY, CA, NV, UT, CO, AZ, NM)",349,1440,24.23611111111111
+train,US region,Demographics,QID11,Which part of the United States do you currently live in?,"Midwest (ND, SD, NE, KS, MN, IA, MO, WI, IL, MI, IN, OH)",276,1440,19.166666666666668
+train,US region,Demographics,QID11,Which part of the United States do you currently live in?,"Northeast (PA, NY, NJ, RI, CT, MA, VT, NH, ME)",238,1440,16.52777777777778
+train,US region,Demographics,QID11,Which part of the United States do you currently live in?,"Pacific (HI, AK)",12,1440,0.8333333333333334
+train,Sex assigned at birth,Demographics,QID12,What is the sex that you were assigned at birth?,Male,729,1440,50.625
+train,Sex assigned at birth,Demographics,QID12,What is the sex that you were assigned at birth?,Female,711,1440,49.375
+train,Age,Demographics,QID13,How old are you?,30-49,515,1440,35.763888888888886
+train,Age,Demographics,QID13,How old are you?,50-64,470,1440,32.638888888888886
+train,Age,Demographics,QID13,How old are you?,18-29,263,1440,18.26388888888889
+train,Age,Demographics,QID13,How old are you?,65+,192,1440,13.333333333333334
+train,Education,Demographics,QID14,What is the highest level of schooling or degree that you have completed?,College graduate/some postgrad,512,1440,35.55555555555556
+train,Education,Demographics,QID14,What is the highest level of schooling or degree that you have completed?,"Some college, no degree",323,1440,22.430555555555557
+train,Education,Demographics,QID14,What is the highest level of schooling or degree that you have completed?,Postgraduate,222,1440,15.416666666666666
+train,Education,Demographics,QID14,What is the highest level of schooling or degree that you have completed?,High school graduate,191,1440,13.26388888888889
+train,Education,Demographics,QID14,What is the highest level of schooling or degree that you have completed?,Associate's degree,182,1440,12.63888888888889
+train,Education,Demographics,QID14,What is the highest level of schooling or degree that you have completed?,Less than high school,10,1440,0.6944444444444444
+train,Race or origin,Demographics,QID15,What is your race or origin?,White,968,1440,67.22222222222223
+train,Race or origin,Demographics,QID15,What is your race or origin?,Black,167,1440,11.597222222222221
+train,Race or origin,Demographics,QID15,What is your race or origin?,Hispanic,139,1440,9.652777777777779
+train,Race or origin,Demographics,QID15,What is your race or origin?,Asian,92,1440,6.388888888888889
+train,Race or origin,Demographics,QID15,What is your race or origin?,Other,74,1440,5.138888888888889
+train,US citizenship,Demographics,QID16,Are you a citizen of the United States?,Other categories (pooled to avoid counts below 5),1440,1440,100.0
+train,Family income before tax,Demographics,QID21,"Last year, what was your total family income from all sources, before taxes?","$100,000 or more",372,1440,25.833333333333332
+train,Family income before tax,Demographics,QID21,"Last year, what was your total family income from all sources, before taxes?","$50,000-$75,000",303,1440,21.041666666666668
+train,Family income before tax,Demographics,QID21,"Last year, what was your total family income from all sources, before taxes?","$30,000-$50,000",290,1440,20.13888888888889
+train,Family income before tax,Demographics,QID21,"Last year, what was your total family income from all sources, before taxes?","Less than $30,000",248,1440,17.22222222222222
+train,Family income before tax,Demographics,QID21,"Last year, what was your total family income from all sources, before taxes?","$75,000-$100,000",227,1440,15.76388888888889
+train,Employment,Demographics,QID24,What is your current employment status?,Full-time employment,623,1440,43.263888888888886
+train,Employment,Demographics,QID24,What is your current employment status?,Self-employed,196,1440,13.61111111111111
+train,Employment,Demographics,QID24,What is your current employment status?,Part-time employment,180,1440,12.5
+train,Employment,Demographics,QID24,What is your current employment status?,Unemployed,178,1440,12.36111111111111
+train,Employment,Demographics,QID24,What is your current employment status?,Retired,167,1440,11.597222222222221
+train,Employment,Demographics,QID24,What is your current employment status?,Student,51,1440,3.5416666666666665
+train,Employment,Demographics,QID24,What is your current employment status?,Home-maker,45,1440,3.125

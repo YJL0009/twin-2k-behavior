@@ -1,0 +1,7 @@
+family,global_cells,not_in_person_B_metadata,administered_cells,valid_among_administered,missing_among_administered,invalid_among_administered
+bounded_numeric,20160,2880,17280,17280,0,0
+matrix_nominal,23040,11496,11544,11544,0,0
+matrix_ordinal,34560,4320,30240,30240,0,0
+mc,70560,5760,64800,64800,0,0
+ordinal,27360,15840,11520,11520,0,0
+unbounded_numeric,5760,2880,2880,2880,0,0
