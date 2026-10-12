@@ -1,0 +1,621 @@
+{
+  "schema_version": 1,
+  "protocol": "A-only input; training B; development C; no final-test stage",
+  "config_provenance": "Reconstructed historical script defaults; lean training/inference release removes standalone diagnostics and memorization experiments. Retained stage commands and scientific protocols are unchanged. Use fresh output directories; original frozen runs require original source trees.",
+  "stages": [
+    {
+      "id": "prepare_data",
+      "description": "Pinned raw-file checks, frozen participant split and training-B majority/validation-C reference",
+      "depends_on": [],
+      "gpu": false,
+      "command": [
+        "{python}",
+        "{package}/prepare_data.py",
+        "--root",
+        "{root}"
+      ],
+      "artifacts": [
+        "data/preparation_summary.json",
+        "outputs/majority_baseline_v1/summary.json",
+        "data/participant_split.csv",
+        "outputs/majority_baseline_v1/predictions.csv"
+      ]
+    },
+    {
+      "id": "qwen_baseline",
+      "description": "Original Qwen JSON-target untrained baseline",
+      "depends_on": [
+        "prepare_data"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/run_qwen_baseline.py",
+        "--root",
+        "{root}",
+        "--model",
+        "{qwen_model}",
+        "--out",
+        "outputs/qwen_baseline_v1",
+        "--batch-size",
+        "2"
+      ],
+      "artifacts": [
+        "outputs/qwen_baseline_v1/summary.json"
+      ]
+    },
+    {
+      "id": "qwen_lora_train",
+      "description": "Original binary Qwen q/v rank-8 LoRA, one epoch",
+      "depends_on": [
+        "qwen_baseline"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/train_qwen_lora.py",
+        "--root",
+        "{root}",
+        "--model",
+        "{qwen_model}",
+        "--out",
+        "outputs/qwen_lora_v1",
+        "--epochs",
+        "1",
+        "--learning-rate",
+        "0.0001",
+        "--micro-batch-size",
+        "1",
+        "--gradient-accumulation",
+        "16"
+      ],
+      "artifacts": [
+        "outputs/qwen_lora_v1/merged/config.json",
+        "outputs/qwen_lora_v1/run_config.json",
+        "outputs/qwen_lora_v1/merged/model*.safetensors"
+      ]
+    },
+    {
+      "id": "qwen_lora_eval",
+      "description": "Strict binary validation-C evaluation of merged Qwen adapter",
+      "depends_on": [
+        "qwen_lora_train"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/run_qwen_baseline.py",
+        "--root",
+        "{root}",
+        "--model",
+        "{root}/outputs/qwen_lora_v1/merged",
+        "--out",
+        "outputs/qwen_lora_v1/validation_eval",
+        "--batch-size",
+        "2"
+      ],
+      "artifacts": [
+        "outputs/qwen_lora_v1/validation_eval/summary.json"
+      ]
+    },
+    {
+      "id": "liquid_json_baseline",
+      "description": "Historical Liquid JSON-target baseline (observed formatting failure)",
+      "depends_on": [
+        "prepare_data"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/run_liquid_baseline.py",
+        "--root",
+        "{root}",
+        "--model",
+        "{liquid_model}",
+        "--out",
+        "outputs/liquid_baseline_tf52_v2",
+        "--batch-size",
+        "1"
+      ],
+      "artifacts": [
+        "outputs/liquid_baseline_tf52_v2/summary.json"
+      ]
+    },
+    {
+      "id": "liquid_plain_baseline",
+      "description": "Liquid zero-shot with fixed A context and repaired plain target",
+      "depends_on": [
+        "liquid_json_baseline"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/run_liquid_plain_baseline.py",
+        "--root",
+        "{root}",
+        "--model",
+        "{liquid_model}",
+        "--source-run",
+        "outputs/liquid_baseline_tf52_v2",
+        "--out",
+        "outputs/liquid_plain_target_v3"
+      ],
+      "artifacts": [
+        "outputs/liquid_plain_target_v3/summary.json"
+      ]
+    },
+    {
+      "id": "liquid_lora_train",
+      "description": "Liquid q/v rank-8 LoRA, one epoch",
+      "depends_on": [
+        "liquid_plain_baseline"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/train_liquid_lora.py",
+        "--root",
+        "{root}",
+        "--model",
+        "{liquid_model}",
+        "--out",
+        "outputs/liquid_lora_v1",
+        "--baseline-run",
+        "outputs/liquid_plain_target_v3",
+        "--epochs",
+        "1",
+        "--learning-rate",
+        "0.0001",
+        "--micro-batch-size",
+        "1",
+        "--gradient-accumulation",
+        "16"
+      ],
+      "artifacts": [
+        "outputs/liquid_lora_v1/training_complete.json"
+      ]
+    },
+    {
+      "id": "liquid_lora_eval",
+      "description": "Liquid LoRA validation-C accuracy and matched-baseline comparison",
+      "depends_on": [
+        "liquid_lora_train"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/evaluate_liquid_lora.py",
+        "--root",
+        "{root}",
+        "--train-run",
+        "outputs/liquid_lora_v1"
+      ],
+      "artifacts": [
+        "outputs/liquid_lora_v1/validation_eval/summary.json"
+      ]
+    },
+    {
+      "id": "liquid_full_train",
+      "description": "Fresh original Liquid full-parameter training, three epochs",
+      "depends_on": [
+        "liquid_lora_train"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/train_liquid_full.py",
+        "--root",
+        "{root}",
+        "--source-run",
+        "outputs/liquid_lora_v1",
+        "--out",
+        "outputs/liquid_full_v1",
+        "--epochs",
+        "3",
+        "--learning-rate",
+        "0.00001",
+        "--micro-batch-size",
+        "1",
+        "--gradient-accumulation",
+        "16"
+      ],
+      "artifacts": [
+        "outputs/liquid_full_v1/training_complete.json",
+        "outputs/liquid_full_v1/checkpoints/checkpoint-*/model*.safetensors"
+      ]
+    },
+    {
+      "id": "liquid_full_eval",
+      "description": "Evaluate each Liquid epoch; select macro-C best, earliest tie",
+      "depends_on": [
+        "liquid_full_train"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/evaluate_liquid_full.py",
+        "--root",
+        "{root}",
+        "--train-run",
+        "outputs/liquid_full_v1",
+        "--checkpoint",
+        "all"
+      ],
+      "artifacts": [
+        "outputs/liquid_full_v1/best_checkpoint.json"
+      ]
+    },
+    {
+      "id": "qwen_full_train",
+      "description": "Fresh Qwen full-parameter training on fixed Liquid-selected plain content",
+      "depends_on": [
+        "liquid_lora_train"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/train_qwen_full.py",
+        "--root",
+        "{root}",
+        "--model",
+        "{qwen_model}",
+        "--source-run",
+        "outputs/liquid_lora_v1",
+        "--out",
+        "outputs/qwen_full_v1",
+        "--epochs",
+        "3",
+        "--learning-rate",
+        "0.00001",
+        "--micro-batch-size",
+        "1",
+        "--gradient-accumulation",
+        "16"
+      ],
+      "artifacts": [
+        "outputs/qwen_full_v1/training_complete.json",
+        "outputs/qwen_full_v1/checkpoints/checkpoint-*/model*.safetensors"
+      ]
+    },
+    {
+      "id": "qwen_matched_baseline",
+      "description": "New matched Qwen plain-content zero-shot evaluation; historical score unavailable",
+      "depends_on": [
+        "qwen_full_train"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/evaluate_qwen_full.py",
+        "--root",
+        "{root}",
+        "--train-run",
+        "outputs/qwen_full_v1",
+        "--baseline-only"
+      ],
+      "artifacts": [
+        "outputs/qwen_full_v1/validation/base/summary.json"
+      ]
+    },
+    {
+      "id": "qwen_full_eval",
+      "description": "Evaluate Qwen epochs and matched base; select macro-C best, earliest tie",
+      "depends_on": [
+        "qwen_full_train"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/evaluate_qwen_full.py",
+        "--root",
+        "{root}",
+        "--train-run",
+        "outputs/qwen_full_v1",
+        "--checkpoint",
+        "all"
+      ],
+      "artifacts": [
+        "outputs/qwen_full_v1/best_checkpoint.json"
+      ]
+    },
+    {
+      "id": "qwen_cv_prepare",
+      "description": "Participant development folds; 574 stays training-only; 309 test excluded",
+      "depends_on": [
+        "qwen_full_eval"
+      ],
+      "gpu": false,
+      "command": [
+        "{python}",
+        "{legacy}/qwen_cv_data.py",
+        "--root",
+        "{root}",
+        "--source-run",
+        "outputs/qwen_full_v1",
+        "--out",
+        "outputs/qwen_cv_v1"
+      ],
+      "artifacts": [
+        "outputs/qwen_cv_v1/cv_config.json"
+      ]
+    },
+    {
+      "id": "qwen_cv_fold_1",
+      "description": "Fresh Qwen full-parameter CV fold 1, fixed three epochs",
+      "depends_on": [
+        "qwen_cv_prepare"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/qwen_cv_fold.py",
+        "--cv-root",
+        "{root}/outputs/qwen_cv_v1",
+        "--fold",
+        "1"
+      ],
+      "artifacts": [
+        "outputs/qwen_cv_v1/fold_1/validation/summary.json"
+      ]
+    },
+    {
+      "id": "qwen_cv_fold_2",
+      "description": "Fresh Qwen full-parameter CV fold 2, fixed three epochs",
+      "depends_on": [
+        "qwen_cv_prepare"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/qwen_cv_fold.py",
+        "--cv-root",
+        "{root}/outputs/qwen_cv_v1",
+        "--fold",
+        "2"
+      ],
+      "artifacts": [
+        "outputs/qwen_cv_v1/fold_2/validation/summary.json"
+      ]
+    },
+    {
+      "id": "qwen_cv_fold_3",
+      "description": "Fresh Qwen full-parameter CV fold 3, fixed three epochs",
+      "depends_on": [
+        "qwen_cv_prepare"
+      ],
+      "gpu": true,
+      "command": [
+        "{python}",
+        "{legacy}/qwen_cv_fold.py",
+        "--cv-root",
+        "{root}/outputs/qwen_cv_v1",
+        "--fold",
+        "3"
+      ],
+      "artifacts": [
+        "outputs/qwen_cv_v1/fold_3/validation/summary.json"
+      ]
+    },
+    {
+      "id": "qwen_cv_report",
+      "description": "Aggregate actual OOF predictions and fold-specific majority baselines",
+      "depends_on": [
+        "qwen_cv_fold_1",
+        "qwen_cv_fold_2",
+        "qwen_cv_fold_3"
+      ],
+      "gpu": false,
+      "command": [
+        "{python}",
+        "{legacy}/qwen_overnight.py",
+        "--root",
+        "{root}",
+        "--source-run",
+        "outputs/qwen_full_v1",
+        "--cv-out",
+        "outputs/qwen_cv_v1",
+        "--report-only"
+      ],
+      "artifacts": [
+        "outputs/qwen_cv_v1/cv_summary.json"
+      ]
+    }
+  ],
+  "groups": {
+    "all": [
+      "prepare_data",
+      "qwen_baseline",
+      "qwen_lora_train",
+      "qwen_lora_eval",
+      "liquid_json_baseline",
+      "liquid_plain_baseline",
+      "liquid_lora_train",
+      "liquid_lora_eval",
+      "liquid_full_train",
+      "liquid_full_eval",
+      "qwen_full_train",
+      "qwen_matched_baseline",
+      "qwen_full_eval",
+      "qwen_cv_prepare",
+      "qwen_cv_fold_1",
+      "qwen_cv_fold_2",
+      "qwen_cv_fold_3",
+      "qwen_cv_report"
+    ],
+    "historical": [
+      "prepare_data",
+      "qwen_baseline",
+      "qwen_lora_train",
+      "qwen_lora_eval",
+      "liquid_json_baseline",
+      "liquid_plain_baseline",
+      "liquid_lora_train",
+      "liquid_lora_eval",
+      "liquid_full_train",
+      "liquid_full_eval",
+      "qwen_full_train",
+      "qwen_matched_baseline",
+      "qwen_full_eval",
+      "qwen_cv_prepare",
+      "qwen_cv_fold_1",
+      "qwen_cv_fold_2",
+      "qwen_cv_fold_3",
+      "qwen_cv_report"
+    ],
+    "prepare": [
+      "prepare_data"
+    ],
+    "qwen": [
+      "qwen_baseline",
+      "qwen_lora_eval",
+      "qwen_full_eval"
+    ],
+    "liquid": [
+      "liquid_json_baseline",
+      "liquid_plain_baseline",
+      "liquid_lora_eval",
+      "liquid_full_eval"
+    ],
+    "qwen_lora": [
+      "qwen_lora_eval"
+    ],
+    "liquid_lora": [
+      "liquid_lora_eval"
+    ],
+    "qwen_full": [
+      "qwen_full_eval"
+    ],
+    "liquid_full": [
+      "liquid_full_eval"
+    ],
+    "cv": [
+      "qwen_cv_report"
+    ]
+  },
+  "result_sources": [
+    {
+      "experiment": "Majority",
+      "path": "outputs/majority_baseline_v1/summary.json",
+      "nested": [],
+      "fields": {
+        "macro_accuracy": "question_macro_accuracy",
+        "pooled_accuracy": "pooled_accuracy",
+        "invalid_outputs": "invalid_outputs",
+        "majority_macro_accuracy": "majority_macro_accuracy"
+      },
+      "scope": "9 binary QIDs, fixed validation C"
+    },
+    {
+      "experiment": "Qwen original zero-shot",
+      "path": "outputs/qwen_baseline_v1/summary.json",
+      "nested": [],
+      "fields": {
+        "macro_accuracy": "question_macro_accuracy",
+        "pooled_accuracy": "pooled_accuracy",
+        "invalid_outputs": "invalid_outputs",
+        "majority_macro_accuracy": "majority_macro_accuracy"
+      },
+      "scope": "9 binary QIDs, fixed validation C"
+    },
+    {
+      "experiment": "Qwen LoRA",
+      "path": "outputs/qwen_lora_v1/validation_eval/summary.json",
+      "nested": [],
+      "fields": {
+        "macro_accuracy": "question_macro_accuracy",
+        "pooled_accuracy": "pooled_accuracy",
+        "invalid_outputs": "invalid_outputs",
+        "majority_macro_accuracy": "majority_macro_accuracy"
+      },
+      "scope": "9 binary QIDs, fixed validation C"
+    },
+    {
+      "experiment": "Liquid JSON (format failure)",
+      "path": "outputs/liquid_baseline_tf52_v2/summary.json",
+      "nested": [],
+      "fields": {
+        "macro_accuracy": "question_macro_accuracy",
+        "pooled_accuracy": "pooled_accuracy",
+        "invalid_outputs": "invalid_outputs",
+        "majority_macro_accuracy": "majority_macro_accuracy"
+      },
+      "scope": "9 binary QIDs, fixed validation C"
+    },
+    {
+      "experiment": "Liquid plain zero-shot",
+      "path": "outputs/liquid_plain_target_v3/summary.json",
+      "nested": [],
+      "fields": {
+        "macro_accuracy": "question_macro_accuracy",
+        "pooled_accuracy": "pooled_accuracy",
+        "invalid_outputs": "invalid_outputs",
+        "majority_macro_accuracy": "majority_macro_accuracy"
+      },
+      "scope": "9 binary QIDs, fixed validation C"
+    },
+    {
+      "experiment": "Liquid LoRA",
+      "path": "outputs/liquid_lora_v1/validation_eval/summary.json",
+      "nested": [],
+      "fields": {
+        "macro_accuracy": "question_macro_accuracy",
+        "pooled_accuracy": "pooled_accuracy",
+        "invalid_outputs": "invalid_outputs",
+        "majority_macro_accuracy": "majority_macro_accuracy"
+      },
+      "scope": "9 binary QIDs, fixed validation C"
+    },
+    {
+      "experiment": "Liquid full selected",
+      "path": "outputs/liquid_full_v1/best_checkpoint.json",
+      "nested": [
+        "best"
+      ],
+      "fields": {
+        "macro_accuracy": "question_macro_accuracy",
+        "pooled_accuracy": "pooled_accuracy",
+        "invalid_outputs": "invalid_outputs",
+        "majority_macro_accuracy": "majority_macro_accuracy"
+      },
+      "scope": "9 binary QIDs, fixed validation C"
+    },
+    {
+      "experiment": "Qwen matched plain zero-shot",
+      "path": "outputs/qwen_full_v1/validation/base/summary.json",
+      "nested": [],
+      "fields": {
+        "macro_accuracy": "question_macro_accuracy",
+        "pooled_accuracy": "pooled_accuracy",
+        "invalid_outputs": "invalid_outputs",
+        "majority_macro_accuracy": "majority_macro_accuracy"
+      },
+      "scope": "9 binary QIDs, fixed validation C"
+    },
+    {
+      "experiment": "Qwen full selected",
+      "path": "outputs/qwen_full_v1/best_checkpoint.json",
+      "nested": [
+        "best"
+      ],
+      "fields": {
+        "macro_accuracy": "question_macro_accuracy",
+        "pooled_accuracy": "pooled_accuracy",
+        "invalid_outputs": "invalid_outputs",
+        "majority_macro_accuracy": "majority_macro_accuracy"
+      },
+      "scope": "9 binary QIDs, fixed validation C"
+    },
+    {
+      "experiment": "Qwen CV",
+      "path": "outputs/qwen_cv_v1/cv_summary.json",
+      "nested": [],
+      "fields": {
+        "macro_accuracy": "oof_question_macro_accuracy",
+        "pooled_accuracy": "oof_pooled_accuracy",
+        "invalid_outputs": "oof_invalid_outputs",
+        "majority_macro_accuracy": "oof_majority_macro_accuracy"
+      },
+      "scope": "9 binary QIDs, development OOF C"
+    }
+  ]
+}

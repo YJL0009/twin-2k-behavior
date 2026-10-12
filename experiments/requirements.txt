@@ -1,0 +1,21 @@
+# Python 3.12; install CUDA-enabled torch 2.8.0 separately for your machine.
+# These three versions are checked by the historical full-B engine.
+transformers==5.2.0
+accelerate==1.12.0
+peft==0.18.0
+datasets>=3.0,<5
+pandas>=2.2,<4
+pyarrow>=17
+numpy>=1.26
+safetensors>=0.4
+huggingface-hub>=1.3,<2
+scikit-learn>=1.5
+scipy>=1.12
+matplotlib>=3.8
+nbformat>=5.10
+nbclient>=0.10
+ipykernel>=6.29
+ipython>=8
+jupyterlab>=4
+# Versions other than protocol-critical pins were not recovered for every run.
+# Save `python -m pip freeze` with each new run.
